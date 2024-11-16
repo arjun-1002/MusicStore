@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Musical Instruments Store</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">🎵 MusicStore</div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="#" id="cart-btn">Cart (<span id="cart-count">0</span>)</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div>
+        <h1>Find Your Sound</h1>
+        <p>Explore premium musical instruments and ignite your creativity!</p>
+        <a href="#shop" class="btn">Shop Now</a>
+      </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="shop">
+      <h2>Our Products</h2>
+      <div class="products">
+        <!-- Instrument 1 -->
+        <div
+          class="product-card"
+          data-name="Acoustic Guitar"
+          data-price="15999"
+        >
+          <a
+            href="https://www.amazon.in/sspa/click?ie=UTF8&spc=MTo4OTM0MDAyNDk1NzU4NDg6MTczMTc3MDc0MzpzcF9idGY6MzAwMjM1NTcxMDIzMTMyOjowOjo&url=%2FAcoustic-Beginner-Acustica-Guitarra-Packaging%2Fdp%2FB09JNVCKFR%2Fref%3Dsr_1_27_sspa%3Fcrid%3D2D2LVV76AU0KN%26dib%3DeyJ2IjoiMSJ9.meLxWdF2eR5A2A8uYCxE6-qzOemnu7NMg6iUT2nVD5jvg7J1XD-oaovBlfNts2FLh-b2DZZc9n2lqi8dh3pBgf_0ae04LJp9yCrTrzRMqEmKpDBdnwwlZQh1Xzg0HIpeSY_2oEFpzjwvbOcQsROjcLpmzc1pYygpBu1eJ8EkdbNtNA34lJ8hICnZsdR3RbuE8nItqJ5aX46Rzu4dzx6bXgDUXd3-TgJcgMuM29VOfN0UWHEBf3LLHqt2r9I64s27FGvXJrLBU8LQThZTgwfF4BYWhfouvqrbWr9fhY43k4c.mVwAzCnB0QLkfPWuITuLeGp5SVqRBnP77jDEJ5SXHHI%26dib_tag%3Dse%26keywords%3Dacoustic%2Bguitar%26qid%3D1731770743%26sprefix%3Dacoustic%2Bguitar%252Caps%252C368%26sr%3D8-27-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9idGY%26psc%3D1"
+            target="_blank"
+          >
+            <img
+              src="https://m.media-amazon.com/images/I/71brhdy2ANL._SX522_.jpg"
+              alt="Acoustic Guitar"
+            />
+          </a>
+          <h3>Acoustic Guitar</h3>
+          <p>₹15,200</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Instrument 2 -->
+        <div class="product-card" data-name="Electric Piano" data-price="34999">
+          <a
+            href="https://www.amazon.in/Portable-Keyboard-Bluetooth-Interface-Beginners/dp/B099NTF96S/ref=sr_1_2?crid=DD2O3R93J8NA&dib=eyJ2IjoiMSJ9.alYnuwG3OQKettjijFTU8jiKx4RO6ziViplut8Uk-6gpUn8g7ARbWUbAtC2KIb17loCpwTA9jocdPLwJrmZq8ALrEg72qfeM-clQdbq3UUDHXZxITgiGbG5GxW1FrUNbMFr0Qtj40eSzBiXtz9T6mIlb7bKHT-HrfvBdpWv9pTJ8zN3m9FhwkC-BcZe6KrzRqVxdpU1N3ioqiLu4923TDJLClOYnd2oyt3TpcC_RcOZ_bVXdNAHo-m220_yhsN397ff4PyUaNZIzxbavEZdxTfqOzNdNCF6u9LuWnKrgUSc.ruqvp0wK8RiFBENiMyvWonczNu8Hv7fSIN1ofzBQxfY&dib_tag=se&keywords=electric+piano&qid=1731771038&sprefix=electric+pia%2Caps%2C473&sr=8-2"
+            target="_blank"
+          >
+            <img
+              src="https://m.media-amazon.com/images/I/4115MmDocFL._SX300_SY300_QL70_FMwebp_.jpg"
+              alt="Electric Piano"
+            />
+          </a>
+          <h3>Electric Piano</h3>
+          <p>₹34,999</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Instrument 3 -->
+        <div class="product-card" data-name="Drum Set" data-price="24999">
+          <a
+            href="https://www.amazon.in/Kadence-Acoustic-Professional-Complete-Drumset/dp/B0CDXCQZXX/ref=sr_1_41?crid=22D419R6P2AWC&dib=eyJ2IjoiMSJ9.qhW1S3ILpggGSZLo1sbkrbjBIviJ2Q9TMyfN8AC-LAwTYgiim4zg_eSb4xUiSsewfmgaAc7AwfSgBUq1nVK9Xl3KNZXVN0Bi0x66QCHY02AeFmU1tnuFNgpb2ZGercXft7WRzEURn5HbBNGylyGH4dXYvKCPVuufjoQVwVSadFwccYV0plPszgbgKREQig6gqIad7jT09FqdBFuqHM7POIWBvStW6VX6nhoV81vlpOpUjszbSQBEMC9FaYKKVWIfzNYt-rkaz9f6IQOoHxuXZ4LX55pUiJq8v3TAnohbZv4.fXvSMjzYAl5gaixdNFGk9HTmTiezhikYUNaEDPzwcqY&dib_tag=se&keywords=drum+set&qid=1731771259&sprefix=drum+se%2Caps%2C462&sr=8-41"
+            target="_blank"
+          >
+            <img
+              src="https://m.media-amazon.com/images/I/41gT+JWQ77L._SY300_SX300_.jpg"
+              alt="Drum Set"
+            />
+          </a>
+          <h3>Drum Set</h3>
+          <p>₹39,999</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Instrument 4 -->
+        <div
+          class="product-card"
+          data-name="Electric Guitar"
+          data-price="19999"
+        >
+          <a
+            href="https://www.amazon.in/Yamaha-PAC012-Electric-Guitar-Metallic/dp/B000MLY7XS/ref=sr_1_7?crid=3KFQENMUV2FX&dib=eyJ2IjoiMSJ9.UJtUiSNYlvSh89-MvCMLmV3qMehquPp2moMsdoKZyhMqBhcEbPjPBCu24Zfg4JAOLNohV1J4MXxnf2F9zNwD9qTQ5-EPQLCW4HMo6RmYvBdpcXh8zJcg-wqACdCUXs7PzBT7pWYuHVeb66bBtNYJ_SLbZxb0jJq6329gBDUEtAZUjMYsPZoM7n47RKpjGxZP2kjEH0LqBf-0uiyS7vkjfOsEoQP4P7Pebisthv6QBnsj1xj5zdUFtK34mmDSXMDe1yD3GGI3GbjEZjnkONhJvud0F8ZPK-JQTuE4wqDl-NU.802ddikHHox81M4QofB0lw5a7fpn9wLok6mDraBzx_k&dib_tag=se&keywords=electric+guitar&qid=1731771840&refinements=p_36%3A1390000-1990000&rnid=1318502031&sprefix=electric+guitar%2Caps%2C394&sr=8-7"
+            target="_blank"
+          >
+            <img
+              src="https://m.media-amazon.com/images/I/61rn5PClUmL._SX679_.jpg"
+              alt="Electric Guitar"
+            />
+          </a>
+          <h3>Electric Guitar</h3>
+          <p>₹18,990</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Instrument 5 -->
+        <div class="product-card" data-name="Violin" data-price="12999">
+          <a
+            href="https://www.amazon.in/JAPS-BIZ-Violin-Musical-Instrument/dp/B08VRYFQJC/ref=sr_1_3?crid=15LDCA5BYU1DI&dib=eyJ2IjoiMSJ9.UpIk_GXMms3Zqx3Vz6DqRDM_Vx0jUsDybFHzVioYcUH-NImU6-MJR0Yw2vD8zIgHYabqpkY9pKI4Dn931xAgVUJ9HuwhiGXdmYXSBOJl0bdR-bWgm4k9XcxQpygKrnRpATATimKFFmgXf59iRfjkfN7FsidRkNgS3rNXSC1pGe47FG39jCeh1ndAC8a3vENfyh-NXjnWoGJA-9SYsLdaERroQ3atHBzGB9SAuQ3g0yAtlLFitgT9YlYy60rvntdfjr85oMucA_L9eI6BTItM5m6GZsiXNit2eeE3ZLz4jJw.hZP4cb7bslnlMU1OztQtsP05GYPPKOA17SfZ1IGrTcc&dib_tag=se&keywords=violin&qid=1731771939&refinements=p_36%3A-1240000&rnid=1318502031&sprefix=violin%2Caps%2C403&sr=8-3"
+            target="_blank"
+          >
+            <img
+              src="https://m.media-amazon.com/images/I/41vNet9D5SL._SX300_SY300_QL70_FMwebp_.jpg"
+              alt="Violin"
+            />
+          </a>
+          <h3>Violin</h3>
+          <p>₹12,099</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Instrument 6 -->
+        <div class="product-card" data-name="Ukulele" data-price="7999">
+          <a
+            href="https://www.amazon.in/Kohala-Ukuleles-KT-STBK-Ukulele-Black/dp/B00I476ATQ/ref=sr_1_1?crid=3DFARJOO1NCYC&dib=eyJ2IjoiMSJ9.7E5mxnNMRRSlcShT3wcXOXmhYAhG8qXmCUWdrbKHCJB5YGXq5fKUgCouxfs_vawWxEWtMJAZTUgj6ARzXZfT3fG5oubwfGurUWb52olFbn0siWpTKvAfzJ8_4SdMDQQG7mXCdQK_qj94F1cZSex2t4ETCzz8lgJIuQNeI4QXuCXAvWmlL30Q2Drfpp_wC_l7svvPdTGjG8Vq2mqFGiPag3X3nBVFbjM04n3zWocgtMhp4nZq5hMDRfpc6-1qMn2Pyt_xCfUpWhX9okEqsYox2dkpBuOgfR106VJ35Ex71o8.8xRhcZ8f5x1oY6cloR0iH8aqNv8cDs9y3gvDR_jmG9I&dib_tag=se&keywords=ukulele&nsdOptOutParam=true&qid=1731772059&refinements=p_36%3A-810000&rnid=1318502031&sprefix=ukul%2Caps%2C390&sr=8-1"
+            target="_blank"
+          >
+            <img
+              src="https://m.media-amazon.com/images/I/31vmS-n6VuL._SX300_SY300_QL70_FMwebp_.jpg"
+              alt="Ukulele"
+            />
+          </a>
+          <h3>Ukulele</h3>
+          <p>₹8,050</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Instrument 7 -->
+        <div class="product-card" data-name="Saxophone" data-price="38999">
+          <a
+            href="https://amazon.in/Kadence-Saxophone-Copper-Anticuk-SAX-KXC/dp/B098761KHP/ref=sr_1_2_sspa?crid=3RL43RV3F8QIC&dib=eyJ2IjoiMSJ9.P0Dkgx9nPvebejI0Ko95Rr6SiHNAaQbVdFBETvtIx-npRtAOv9NGjbI11EfKlcywBNTcg7-RHc9YeFhO5ScmzAJ2SJf1p_X3zy3TUZJHfDvZsXJyr0Jh_T8NXR_HsPcMQb-HW2yftAx5k-NgTAmJ1ZRZ6XiUcdwzmxwK2dC-iVi7qQi6lUFo2iBcRFaUMkLfFQTdM84fg2ZA8O4uOqzJ_1n8maz7qQLvqcAIdUKL8OZe18H8y1szgmudK3_zIIgE5KkGB7c1KkbGp7Uoz2-xsvDKDWi8U3f1NWlRJYVUHfk.mnxtON_4qxShswY2-ldZO8UT8OUhxtd1S6prOEnAb38&dib_tag=se&keywords=Saxophone&qid=1731772125&sprefix=saxophone%2Caps%2C264&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"
+            target="_blank"
+          >
+            <img
+              src="https://m.media-amazon.com/images/I/41p3zQQ-2LS._SX300_SY300_QL70_FMwebp_.jpg"
+              alt="Saxophone"
+            />
+          </a>
+          <h3>Saxophone</h3>
+          <p>₹35,999</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Instrument 8 -->
+        <div class="product-card" data-name="Tabla Set" data-price="10999">
+          <a
+            href="https://www.amazon.in/Surjan-Singh-Sons-Brass-Material/dp/B0731369XF/ref=sr_1_2_sspa?crid=86VXKJSRWHQJ&dib=eyJ2IjoiMSJ9.wyFyuogVh-H97FintnNb79czDZAS-TPryKdyVL-7677h6lSmVEXL4DKZPg8f39hx-WlYGDJOC1J7hXO4RPel2kkPFlDPJ87EQpmfvwPQildR1lrC4nV9lfDgUyWZParU78jna_KbFnJA23TJMzTllHLHxDLtUcryuBnOUIW7oQpKId9lwL65sSLKOCsYKZ3zoXgAr9c7EpwVLc4lLuVC0sH4Po6qWJPmEE8mGB9hRI3i4QbPpSBxNsxYR0pawgJGUsXz2xKSxiUVH2KuGcyxvL2kR_2yXChML6PZKVNv2-M.kcTUFjTGZsxchA9ZKiSeDqpZ2xfC67TClrcZEXImTtg&dib_tag=se&keywords=tabla+set&qid=1731772201&sprefix=tabla+set%2Caps%2C281&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"
+            target="_blank"
+          >
+            <img
+              src="https://m.media-amazon.com/images/I/413oxOaiiGS._SY300_SX300_QL70_FMwebp_.jpg"
+              alt="Tabla Set"
+            />
+          </a>
+          <h3>Tabla Set</h3>
+          <p>₹10,500</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Instrument 9 -->
+        <div class="product-card" data-name="Flute" data-price="2999">
+          <a
+            href="https://www.amazon.in/Natural-Medium-Bamboo-Flute-Combination/dp/B0B556QD94/ref=sr_1_2_sspa?crid=1UN87NEJSXYXD&dib=eyJ2IjoiMSJ9.9lFHHOJERjwkb-b2vB-o69H0gFDP4hkB4BjB02Q50BBd5Q187MCZL2kKAHJdyYlyF6yrm6cEzh7AEzG0Gc-Elq-VNH3HfYRFa2r3LxYrTaqQuf_W2l7SvEZWyGiSzYNtJb1KD8-snRCrT-Y-qc28NnkxWaXErtVjOvpGqd_rVtxeSBjSntKdcjrGZ8drMw-Frh9tXqN1OIOHpYvTOaTwjrLom5oPmVUMYAeZC_aceIg4lBmlm61hA5rgcDJSEFa1Xv16qgI4wKeoAw07m6HUR7NS7FXB4cCo4vmJ7O2NU_4.tG0wOSrpd8044cWihktB-AyYzG2I2HqQkk98vfkmts4&dib_tag=se&keywords=flute&qid=1731772243&sprefix=flute%2Caps%2C306&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"
+            target="_blank"
+          >
+            <img
+              src="https://m.media-amazon.com/images/I/41uQOWv16VL._SX300_SY300_QL70_FMwebp_.jpg"
+              alt="Flute"
+            />
+          </a>
+          <h3>Flute</h3>
+          <p>₹2,100</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Instrument 10 -->
+        <div class="product-card" data-name="Harmonica" data-price="1499">
+          <a
+            href="https://www.amazon.in/East-top-Harmonica-Professional-Students%EF%BC%88Silver/dp/B0894R9P8Y/ref=sr_1_2_sspa?crid=3OUBHWJE9ZV53&dib=eyJ2IjoiMSJ9.Mq7-HTdSceWj6WN7y4OfU3hQ7kt4Gi8PZZ7D1TmQHhjwuOWmRmliRthoV44ff4bcBieJkVoNUSjxzDswDPs94z2YFicWDqrGbQcdEkxDHesMGz8ORzSd8yt_209Nep0SLe4mTsE4jy841JVK5BtwI2DuzUb5EDUVNtFN3_YQ1F9LZaKdur_ieguoFbPvVjvX8dtEEsxHcf8fX0tTsV-bovZBsMS-2XikjBQDeFz7uaZaYXXM2x7kEI3vbfQkATkhuzh5ytybis3YLjN_nwseVH03AwuZXc62RDJqccHqEn8.haLUMT0XYGEtKSmToIuz7tXr1HXYLHyHUipkj8EKE4o&dib_tag=se&keywords=harmonica&nsdOptOutParam=true&qid=1731772317&sprefix=harmonica%2Caps%2C267&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1"
+            target="_blank"
+          >
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/41fAQdyJDUL._SX300_SY300_QL70_FMwebp_.jpg"
+              alt="Harmonica"
+            />
+          </a>
+          <h3>Harmonica</h3>
+          <p>₹1,038</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="cart-modal" class="modal">
+      <div class="modal-content">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: ₹<span id="cart-total">0.00</span></p>
+        <button id="checkout">Checkout</button>
+        <button id="close-cart">Close</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 MusicStore. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

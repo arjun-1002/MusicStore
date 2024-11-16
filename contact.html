@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - MusicStore</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">🎵 MusicStore</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#shop">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li>
+            <a href="#" id="cart-btn">Cart (<span id="cart-count">0</span>)</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>
+          Have questions, feedback, or need assistance? We'd love to hear from
+          you! Please fill out the form below, and our team will get back to you
+          as soon as possible.
+        </p>
+        <div class="contact-content">
+          <!-- Contact Form -->
+          <form id="contact-form" class="contact-form">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Enter subject"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Write your message"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+          <!-- Contact Details -->
+          <div class="contact-info">
+            <h2>Our Office</h2>
+            <p>
+              🎵 MusicStore HQ<br />
+              123 Melody Lane, Harmony City, India<br />
+              Phone: +91 123-456-7890<br />
+              Email:
+              <a href="mailto:support@musicstore.com">support@musicstore.com</a>
+            </p>
+            <h2>Working Hours</h2>
+            <p>
+              Monday - Friday: 9:00 AM - 6:00 PM<br />
+              Saturday: 10:00 AM - 4:00 PM<br />
+              Sunday: Closed
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 MusicStore. All rights reserved.</p>
+    </footer>
+
+    <script>
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("Thank you for contacting us! We'll get back to you shortly.");
+          this.reset();
+        });
+    </script>
+  </body>
+</html>
