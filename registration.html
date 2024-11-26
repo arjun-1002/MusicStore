@@ -3,11 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registration</title>
+    <title>Register</title>
     <style>
       body {
         font-family: Arial, sans-serif;
-        background: linear-gradient(to bottom, #333, #555);
+        background: url("https://images.pexels.com/photos/248510/pexels-photo-248510.jpeg?auto=compress&cs=tinysrgb&w=600")
+          no-repeat center center fixed;
+        background-size: cover;
         color: #fff;
         display: flex;
         justify-content: center;
@@ -15,39 +17,30 @@
         height: 100vh;
         margin: 0;
       }
-
       .form-container {
-        background: #444;
+        background: rgba(0, 0, 0, 0.7);
         padding: 30px;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
         width: 100%;
         max-width: 400px;
       }
-
       .form-container h2 {
         text-align: center;
         margin-bottom: 20px;
         color: #ffcc00;
       }
-
       .form-container label {
         display: block;
         margin-bottom: 5px;
-        font-size: 1em;
       }
-
       .form-container input {
         width: 100%;
         padding: 10px;
         margin-bottom: 15px;
         border: none;
         border-radius: 5px;
-        background: #555;
-        color: #fff;
-        font-size: 1em;
       }
-
       .form-container button {
         width: 100%;
         padding: 10px;
@@ -59,36 +52,90 @@
         cursor: pointer;
         transition: background 0.3s ease;
       }
-
       .form-container button:hover {
         background: #ff9900;
       }
-
-      .form-container a {
+      .form-container .home-button {
+        margin-top: 15px;
+        background: transparent;
+        border: 1px solid #ffcc00;
         color: #ffcc00;
-        display: block;
+        cursor: pointer;
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
         text-align: center;
-        margin-top: 10px;
+        font-size: 1em;
+      }
+      .form-container .home-button:hover {
+        background: #ffcc00;
+        color: #111;
+      }
+      .error {
+        color: red;
         font-size: 0.9em;
+        margin-bottom: 10px;
       }
     </style>
   </head>
   <body>
     <div class="form-container">
       <h2>Register</h2>
-      <form action="/register" method="POST">
+      <form id="registerForm">
+        <div id="errorMessage" class="error"></div>
         <label for="username">Username</label>
         <input type="text" id="username" name="username" required />
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required />
 
         <label for="password">Password</label>
         <input type="password" id="password" name="password" required />
 
-        <button type="submit">Sign Up</button>
+        <label for="confirmPassword">Confirm Password</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          required
+        />
+
+        <button type="submit">Register</button>
       </form>
-      <a href="login.html">Already have an account? Login</a>
+      <button class="home-button" onclick="window.location.href='index.html'">
+        Back to Home
+      </button>
     </div>
+
+    <script>
+      document
+        .getElementById("registerForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const username = document.getElementById("username").value.trim();
+          const password = document.getElementById("password").value;
+          const confirmPassword =
+            document.getElementById("confirmPassword").value;
+
+          const errorMessage = document.getElementById("errorMessage");
+          errorMessage.textContent = "";
+
+          // Basic validation
+          if (!username) {
+            errorMessage.textContent = "Username is required.";
+            return;
+          }
+          if (!password || password.length < 6) {
+            errorMessage.textContent =
+              "Password must be at least 6 characters long.";
+            return;
+          }
+          if (password !== confirmPassword) {
+            errorMessage.textContent = "Passwords do not match.";
+            return;
+          }
+
+          alert("Registration successful! Redirecting to login page...");
+          window.location.href = "login.html"; // Redirect to the login page
+        });
+    </script>
   </body>
 </html>
