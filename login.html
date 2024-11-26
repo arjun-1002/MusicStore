@@ -7,7 +7,9 @@
     <style>
       body {
         font-family: Arial, sans-serif;
-        background: linear-gradient(to bottom, #333, #555);
+        background: url("https://images.pexels.com/photos/3771842/pexels-photo-3771842.jpeg?auto=compress&cs=tinysrgb&w=600")
+          no-repeat center center fixed;
+        background-size: cover;
         color: #fff;
         display: flex;
         justify-content: center;
@@ -15,39 +17,30 @@
         height: 100vh;
         margin: 0;
       }
-
       .form-container {
-        background: #444;
+        background: rgba(0, 0, 0, 0.7);
         padding: 30px;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
         width: 100%;
         max-width: 400px;
       }
-
       .form-container h2 {
         text-align: center;
         margin-bottom: 20px;
         color: #ffcc00;
       }
-
       .form-container label {
         display: block;
         margin-bottom: 5px;
-        font-size: 1em;
       }
-
       .form-container input {
         width: 100%;
         padding: 10px;
         margin-bottom: 15px;
         border: none;
         border-radius: 5px;
-        background: #555;
-        color: #fff;
-        font-size: 1em;
       }
-
       .form-container button {
         width: 100%;
         padding: 10px;
@@ -59,24 +52,43 @@
         cursor: pointer;
         transition: background 0.3s ease;
       }
-
       .form-container button:hover {
         background: #ff9900;
       }
-
       .form-container a {
         color: #ffcc00;
-        display: block;
         text-align: center;
+        display: block;
         margin-top: 10px;
+      }
+      .form-container .home-button {
+        margin-top: 15px;
+        background: transparent;
+        border: 1px solid #ffcc00;
+        color: #ffcc00;
+        cursor: pointer;
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 1em;
+      }
+      .form-container .home-button:hover {
+        background: #ffcc00;
+        color: #111;
+      }
+      .error {
+        color: red;
         font-size: 0.9em;
+        margin-bottom: 10px;
       }
     </style>
   </head>
   <body>
     <div class="form-container">
       <h2>Login</h2>
-      <form action="/login" method="POST">
+      <form id="loginForm">
+        <div id="errorMessage" class="error"></div>
         <label for="username">Username</label>
         <input type="text" id="username" name="username" required />
 
@@ -86,6 +98,42 @@
         <button type="submit">Login</button>
       </form>
       <a href="registration.html">Don't have an account? Register</a>
+      <button class="home-button" onclick="window.location.href='index.html'">
+        Back to Home
+      </button>
     </div>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const username = document.getElementById("username").value.trim();
+          const password = document.getElementById("password").value;
+
+          const errorMessage = document.getElementById("errorMessage");
+          errorMessage.textContent = "";
+
+          // Basic validation
+          if (!username) {
+            errorMessage.textContent = "Username is required.";
+            return;
+          }
+          if (!password || password.length < 6) {
+            errorMessage.textContent =
+              "Password must be at least 6 characters long.";
+            return;
+          }
+
+          // Simulating successful login for demo purposes
+          if (username === "testuser" && password === "password123") {
+            alert("Login successful! Redirecting to home page...");
+            window.location.href = "index.html"; // Redirect to the home page
+          } else {
+            errorMessage.textContent = "Invalid username or password.";
+          }
+        });
+    </script>
   </body>
 </html>
